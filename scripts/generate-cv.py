@@ -73,50 +73,36 @@ CV_DATA = {
                 {
                     "name": "[Indonesia Food Price Intelligence](https://github.com/albarpambagio/indonesia-food-price-intelligence)",
                     "date": "In Progress",
-                    "summary": "17-year WFP food price pipeline (325,240 raw rows to 2,116 analytical rows) across 224 markets in 34 provinces. dbt transformation layer with 33 automated tests. AutoARIMA/AutoETS forecasting with 12-month holdout validation.",
-                    "highlights": [
-                        "325K+ raw rows transformed to 2,116 analytical rows via dbt",
-                        "224 markets across 34 Indonesian provinces",
-                        "33 automated dbt tests for data quality",
-                        "AutoARIMA/AutoETS forecasting with 12-month holdout validation",
-                    ],
+                    "summary": "Built a procurement intelligence tool for FMCG Category Managers sourcing rice, cooking oil, sugar, and flour across Indonesia. Analyzed 17 years of WFP price data across 224 markets to map seasonal spikes (Ramadan premium on sugar, Q2 harvest discount on rice), a 30% persistent price gap between Eastern Indonesia and Java for cooking oil, and a 3-month leading relationship between oil and flour prices. Includes a 6-month price forecast with explicit confidence intervals to guide procurement timing decisions.",
                 },
                 {
                     "name": "[Pharmacy Retail Sales Analytics](https://github.com/albarpambagio/pharmacy-retail-sales-analytics)",
-                    "summary": "End-to-end ETL pipeline processing 511,559 pharmacy transaction lines. Parsed irregular prescription number formats, designed star schema, classified 2,233 SKUs.",
-                    "highlights": [
-                        "511,559 transaction lines ingested via ETL pipeline",
-                        "2,233 SKUs classified; 2 negative-margin products identified",
-                        "[Dashboard](https://pharmacy-retail-sales-analytics.pages.dev) with margin threshold slider and CSV export",
-                    ],
+                    "date": "May 18 – May 26, 2026",
+                    "summary": "Analyzed a hospital pharmacy's full-year sales data to surface margin risk and inform 2016 procurement decisions. Identified 2 branded SKUs selling below cost and mapped revenue concentration patterns across inpatient and outpatient channels. Delivered a 3-page interactive dashboard \u2014 with a margin threshold slider and CSV export \u2014 for the Pharmacy Director and Finance team to act on product pricing and procurement priorities.",
                 },
                 {
                     "name": "[Olist Marketing Funnel: Channel Performance & LTV Analysis](https://github.com/albarpambagio/olist-marketing-report)",
-                    "summary": "Analyzed 8,000 MQLs and 100,000 orders. Combined star schema joining marketing funnel and e-commerce datasets. Identified root cause of Social channel low conversion rate.",
-                    "highlights": [
-                        "8,000 MQLs and 100,000 orders analyzed",
-                        "Social channel conversion: 5.56% vs 17.3% Wolf-profile deal mix",
-                        "4-page Power BI dashboard for VP Marketing budget allocation -- [Deck](https://pitch.com/v/olist-channel-performance-report-ew5t9z)",
-                    ],
+                    "date": "May 8 – May 18, 2026",
+                    "summary": "Investigated why Social \u2014 Olist's second-highest-volume acquisition channel \u2014 converted at only half the rate of Paid and Organic Search. Found the root cause in channel deal composition: Social's closed deals skewed nearly twice as heavy in high-maintenance seller profiles compared to other channels, a structural drag on conversion rather than a lead quality issue. Delivered a 4-page Power BI dashboard with channel LTV and funnel analysis to support VP Marketing budget allocation for Q3 2018.",
                 },
             ],
             "skills": [
                 {"label": "Languages", "details": "Python, SQL, TypeScript"},
                 {
-                    "label": "Databases & Tools",
-                    "details": "PostgreSQL, DuckDB, dbt, pandas",
+                    "label": "Data Stack",
+                    "details": "PostgreSQL, DuckDB, dbt, pandas, ETL Pipeline Design, Star Schema Modeling",
                 },
                 {
-                    "label": "Analytics",
-                        "details": "ETL Pipeline Design, Star Schema Modeling, Exploratory Data Analysis, Time-Series Analysis, Forecasting (AutoARIMA, AutoETS)",
+                    "label": "Analysis & Forecasting",
+                    "details": "Exploratory Data Analysis, Time-Series Analysis, Forecasting (AutoARIMA, AutoETS), Funnel Analysis, LTV Analysis",
                 },
                 {
-                    "label": "Business Analytics",
-                    "details": "Funnel Analysis, LTV Analysis, Power BI",
+                    "label": "Visualization",
+                    "details": "Power BI, Recharts, Marimo",
                 },
                 {
-                    "label": "Web & Deployment",
-                    "details": "Next.js, Recharts, Cloudflare Pages, GitHub Actions, Marimo",
+                    "label": "Infrastructure & Tools",
+                    "details": "Next.js, TypeScript, Cloudflare Pages, GitHub Actions, AI-Assisted Development",
                 },
             ],
         },
