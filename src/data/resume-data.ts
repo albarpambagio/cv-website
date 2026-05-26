@@ -65,26 +65,45 @@ export const RESUME_DATA: ResumeData = {
     },
   ],
   skills: [
-    "Python",
-    "SQL",
-    "PostgreSQL",
-    "DuckDB",
-    "dbt",
-    "pandas",
-    "ETL Pipeline Design",
-    "Star Schema Modeling",
-    "Exploratory Data Analysis",
-    "Time-Series Analysis",
-    "Forecasting (AutoARIMA, AutoETS)",
-    "Funnel Analysis",
-    "LTV Analysis",
-    "Power BI",
-    "Next.js",
-    "TypeScript",
-    "Recharts",
-    "Cloudflare Pages",
-    "GitHub Actions",
-    "Marimo",
+    {
+      label: "Languages",
+      items: ["Python", "SQL", "TypeScript"],
+    },
+    {
+      label: "Data Stack",
+      items: [
+        "PostgreSQL",
+        "DuckDB",
+        "dbt",
+        "pandas",
+        "ETL Pipeline Design",
+        "Star Schema Modeling",
+      ],
+    },
+    {
+      label: "Analysis & Forecasting",
+      items: [
+        "Exploratory Data Analysis",
+        "Time-Series Analysis",
+        "Forecasting (AutoARIMA, AutoETS)",
+        "Funnel Analysis",
+        "LTV Analysis",
+      ],
+    },
+    {
+      label: "Visualization",
+      items: ["Power BI", "Recharts", "Marimo"],
+    },
+    {
+      label: "Infrastructure & Tools",
+      items: [
+        "Next.js",
+        "TypeScript",
+        "Cloudflare Pages",
+        "GitHub Actions",
+        "AI-Assisted Development",
+      ],
+    },
   ],
   projects: [
     {
@@ -100,7 +119,8 @@ export const RESUME_DATA: ResumeData = {
         "Cloudflare Pages",
       ],
       description:
-        "17-year WFP food price pipeline (325,240 raw rows → 2,116 analytical rows) across 224 markets in 34 Indonesian provinces. dbt transformation layer with 33 automated tests. AutoARIMA/AutoETS forecasting with 12-month holdout validation. 4-page procurement dashboard for FMCG Category Managers.",
+        "Built a procurement intelligence tool for FMCG Category Managers sourcing rice, cooking oil, sugar, and flour across Indonesia. Analyzed 17 years of WFP price data across 224 markets to map seasonal spikes (Ramadan premium on sugar, Q2 harvest discount on rice), a 30% persistent price gap between Eastern Indonesia and Java for cooking oil, and a 3-month leading relationship between oil and flour prices. Includes a 6-month price forecast with explicit confidence intervals to guide procurement timing decisions.",
+      start: "May 25, 2026",
       link: {
         label: "GitHub",
         href: "https://github.com/albarpambagio/indonesia-food-price-intelligence",
@@ -118,7 +138,9 @@ export const RESUME_DATA: ResumeData = {
         "Cloudflare Pages",
       ],
       description:
-        "End-to-end ETL pipeline for 511,559 pharmacy transaction lines. Parsed irregular prescription number formats, designed star schema, classified 2,233 SKUs, and identified 2 negative-margin products. Deployed interactive 3-page dashboard with margin threshold slider and CSV export.",
+        "Analyzed a hospital pharmacy's full-year sales data to surface margin risk and inform 2016 procurement decisions. Identified 2 branded SKUs selling below cost and mapped revenue concentration patterns across inpatient and outpatient channels. Delivered a 3-page interactive dashboard — with a margin threshold slider and CSV export — for the Pharmacy Director and Finance team to act on product pricing and procurement priorities.",
+      start: "May 18, 2026",
+      end: "May 26, 2026",
       link: {
         label: "GitHub",
         href: "https://github.com/albarpambagio/pharmacy-retail-sales-analytics",
@@ -134,7 +156,9 @@ export const RESUME_DATA: ResumeData = {
       title: "Olist Marketing Funnel: Channel Performance & LTV Analysis",
       techStack: ["Python", "PostgreSQL", "Power BI"],
       description:
-        "Analyzed 8,000 MQLs and 100,000 orders. Built combined star schema joining marketing funnel and e-commerce datasets. Identified root cause of Social channel's low conversion (5.56%): 17.3% Wolf-profile deal mix — nearly double other channels. Delivered 4-page Power BI dashboard for VP Marketing budget allocation.",
+        "Investigated why Social — Olist's second-highest-volume acquisition channel — converted at only half the rate of Paid and Organic Search. Found the root cause in channel deal composition: Social's closed deals skewed nearly twice as heavy in high-maintenance seller profiles compared to other channels, a structural drag on conversion rather than a lead quality issue. Delivered a 4-page Power BI dashboard with channel LTV and funnel analysis to support VP Marketing budget allocation for Q3 2018.",
+      start: "May 8, 2026",
+      end: "May 18, 2026",
       link: {
         label: "GitHub",
         href: "https://github.com/albarpambagio/olist-marketing-report",

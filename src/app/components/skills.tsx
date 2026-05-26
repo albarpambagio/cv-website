@@ -1,31 +1,34 @@
 import { Badge } from "@/components/ui/badge";
 import { Section } from "@/components/ui/section";
-import { cn } from "@/lib/utils";
+import type { RESUME_DATA } from "@/data/resume-data";
 
-type Skills = readonly string[];
+type Skills = (typeof RESUME_DATA)["skills"];
 
-interface SkillsListProps {
-  skills: Skills;
-  className?: string;
+interface SkillsGroupProps {
+  label: string;
+  items: string[];
 }
 
-/**
- * Renders a list of skills as badges
- */
-function SkillsList({ skills, className }: SkillsListProps) {
+function SkillsGroup({ label, items }: SkillsGroupProps) {
   return (
-    <ul
-      className={cn("flex list-none flex-wrap gap-1 p-0", className)}
-      aria-label="List of skills"
-    >
-      {skills.map((skill) => (
-        <li key={skill}>
-          <Badge className="print:text-[10px]" aria-label={`Skill: ${skill}`}>
-            {skill}
-          </Badge>
-        </li>
-      ))}
-    </ul>
+    <div>
+      <h3 className="mb-1 text-xs font-semibold text-muted-foreground">
+        {label}
+      </h3>
+      <ul className="flex list-none flex-wrap gap-1 p-0" aria-label={label}>
+        {items.map((skill) => (
+          <li key={skill}>
+            <Badge
+              className="print:text-[10px]"
+              variant="secondary"
+              aria-label={`Skill: ${skill}`}
+            >
+              {skill}
+            </Badge>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
 
@@ -34,17 +37,21 @@ interface SkillsProps {
   className?: string;
 }
 
-/**
- * Skills section component
- * Displays a list of professional skills as badges
- */
 export function Skills({ skills, className }: SkillsProps) {
   return (
     <Section className={className}>
       <h2 className="text-xl font-bold" id="skills-section">
         Skills
       </h2>
-      <SkillsList skills={skills} />
+      <div className="space-y-3">
+        {skills.map((group) => (
+          <SkillsGroup
+            key={group.label}
+            label={group.label}
+            items={group.items}
+          />
+        ))}
+      </div>
     </Section>
   );
 }

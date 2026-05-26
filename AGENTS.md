@@ -12,7 +12,7 @@
 - **Language:** TypeScript
 - **Icons:** Custom SVG components + Lucide React (Globe, Mail, Phone)
 - **Linting:** Biome
-- **Deployment:** Cloudflare Pages (planned)
+- **Deployment:** Cloudflare Pages (active — albar-cv.pages.dev)
 - **Styling:** Tailwind CSS v3 + CSS variables in `globals.css`
 
 ---
@@ -27,8 +27,10 @@
 | `src/app/page.tsx` | Section ordering and layout structure | ⚠️ Only if reordering sections |
 | `src/app/components/header.tsx` | Header + social icon mapping | ⚠️ If adding new icon types |
 | `src/components/` | UI components (Card, Badge, Section) | ❌ Never edit |
+| `src/app/components/projects.tsx` | Project cards — date display, PDF spacing | ⚠️ If adding new project display features |
+| `src/app/components/skills.tsx` | Skill groups rendering | ⚠️ If changing skill layout |
 | `src/components/icons/` | SVG icon components | ⚠️ Add new icons only |
-| `src/lib/types.ts` | TypeScript types (`IconType`, `ResumeData`) | ⚠️ Add new icon types only |
+| `src/lib/types.ts` | TypeScript types (`IconType`, `ResumeData`) | ⚠️ Only if data shape changes |
 | `package.json` | Dependencies | ❌ Never edit |
 
 ---
@@ -74,8 +76,8 @@ export const RESUME_DATA: ResumeData = {
   },
   education: Array<{ school, degree, start, end }>,
   work: Array<{ company, link, badges, title, start, end: string|null, description, highlights? }>,
-  skills: string[],
-  projects: Array<{ title, techStack, description, link: { label, href } }>
+  skills: Array<{ label: string, items: string[] }>,
+  projects: Array<{ title, techStack, description, start?, end?, link: { label, href }, links? }>
 }
 ```
 
@@ -94,7 +96,9 @@ Icons are string-based (`IconType`), mapped in `header.tsx`:
 - Keep existing import patterns
 - Projects section is the highest priority for recruiter signal
 - Use `"In Progress"` badge in `techStack` for unfinished projects
-- Descriptions should include concrete numbers (row counts, accuracy, etc.)
+- Open project descriptions with the business problem, not the method
+- Use `@page { margin: 0 }` in `globals.css` to suppress browser print headers
+- Wrap bare text nodes in `<span>` inside flex containers for PDF compat
 
 ### What NOT to do
 - Never modify UI component files under `src/components/` (except `icons/`)

@@ -33,7 +33,7 @@ function ProjectLink({ title, link }: ProjectLinkProps) {
         className="inline-flex items-center gap-1 underline underline-offset-2"
         aria-label={`${title} project (opens in new tab)`}
       >
-        {title}
+        <span className="font-medium">{title}</span>
         <span
           className="size-1 rounded-full bg-green-500"
           title="Active project indicator"
@@ -85,20 +85,23 @@ interface ProjectCardProps {
   tags: ProjectTags;
   link?: string;
   links?: Array<{ label: string; href: string }>;
+  start?: string;
+  end?: string | null;
 }
 
-/**
- * Card component displaying project information
- */
 function ProjectCard({
   title,
   description,
   tags,
   link,
   links,
+  start,
+  end,
 }: ProjectCardProps) {
   const statusTag = tags.find((t) => t === "In Progress");
   const techTags = tags.filter((t) => t !== "In Progress");
+
+  const dateLabel = start && end ? `${start} — ${end}` : (start ?? null);
 
   return (
     <Card className="flex h-full flex-col overflow-hidden border p-3 print:overflow-visible print:break-inside-avoid">
@@ -112,8 +115,13 @@ function ProjectCard({
               {statusTag}
             </Badge>
           )}
-          <CardTitle className="text-base">
+          <CardTitle className="text-base print:break-words">
             <ProjectLink title={title} link={link} />
+            {dateLabel && (
+              <span className="ml-1.5 font-mono text-[10px] text-muted-foreground/60">
+                {dateLabel}
+              </span>
+            )}
           </CardTitle>
           <CardDescription
             className="text-pretty font-mono text-xs print:text-[10px]"
@@ -167,7 +175,7 @@ export function Projects({ projects }: ProjectsProps) {
         {projects.map((project) => (
           <article
             key={project.title}
-            className="h-full transition-all duration-200 hover:-translate-y-0.5 hover:shadow-sm print:hover:translate-y-0 print:hover:shadow-none"
+            className="h-full transition-all duration-200 hover:-translate-y-0.5 hover:shadow-sm print:break-inside-avoid print:hover:translate-y-0 print:hover:shadow-none"
           >
             <ProjectCard
               title={project.title}
@@ -175,6 +183,8 @@ export function Projects({ projects }: ProjectsProps) {
               tags={project.techStack}
               link={project.link?.href}
               links={project.links}
+              start={project.start}
+              end={project.end}
             />
           </article>
         ))}

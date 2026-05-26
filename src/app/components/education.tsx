@@ -17,10 +17,7 @@ interface EducationPeriodProps {
 function EducationPeriod({ start, end }: EducationPeriodProps) {
   if (start === end) {
     return (
-      <div
-        className="text-sm tabular-nums text-gray-500"
-        title={start}
-      >
+      <div className="text-sm tabular-nums text-gray-500" title={start}>
         {start}
       </div>
     );
