@@ -7,7 +7,7 @@ export function generatePersonStructuredData() {
     name: RESUME_DATA.name,
     alternateName: RESUME_DATA.initials,
     description: RESUME_DATA.about,
-    url: RESUME_DATA.personalWebsiteUrl,
+    url: "https://albar-cv.pages.dev",
     image: RESUME_DATA.avatarUrl,
     sameAs: RESUME_DATA.contact.social.map((social) => social.url),
     address: {
@@ -56,12 +56,12 @@ export function generateWebPageStructuredData() {
     "@type": "WebPage",
     name: `${RESUME_DATA.name} - Resume`,
     description: RESUME_DATA.about,
-    url: RESUME_DATA.personalWebsiteUrl,
+    url: "https://albar-cv.pages.dev",
     inLanguage: "en-US",
     isPartOf: {
       "@type": "WebSite",
       name: `${RESUME_DATA.name}'s Professional Resume`,
-      url: RESUME_DATA.personalWebsiteUrl,
+      url: "https://albar-cv.pages.dev",
     },
     about: {
       "@type": "Person",
@@ -83,6 +83,6 @@ export function generateResumeStructuredData() {
     about: person,
     name: `${RESUME_DATA.name} - Professional Resume`,
     description: `Professional resume and portfolio of ${RESUME_DATA.name}, ${RESUME_DATA.about}`,
-    url: RESUME_DATA.personalWebsiteUrl,
+    url: "https://albar-cv.pages.dev",
   };
 }

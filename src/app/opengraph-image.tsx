@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 import { RESUME_DATA } from "../data/resume-data";
 
-export const runtime = "edge";
+export const dynamic = "force-static";
 
 export const alt = "Minimalist Resume";
 export const size = {
@@ -33,17 +33,19 @@ export default async function Image() {
           textAlign: "center",
         }}
       >
-        {/* biome-ignore lint/performance/noImgElement: ImageResponse context requires img element */}
-        <img
-          src={RESUME_DATA.avatarUrl}
-          alt={RESUME_DATA.name}
-          style={{
-            width: "150px",
-            height: "150px",
-            borderRadius: "10%",
-            marginBottom: "2rem",
-          }}
-        />
+        {RESUME_DATA.avatarUrl && (
+          // biome-ignore lint/performance/noImgElement: ImageResponse context requires img element
+          <img
+            src={RESUME_DATA.avatarUrl}
+            alt={RESUME_DATA.name}
+            style={{
+              width: "150px",
+              height: "150px",
+              borderRadius: "10%",
+              marginBottom: "2rem",
+            }}
+          />
+        )}
         <div
           style={{
             fontSize: "3rem",

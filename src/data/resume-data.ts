@@ -10,7 +10,7 @@ export const RESUME_DATA: ResumeData = {
   summary:
     "Data analyst with hands-on experience building end-to-end analytics pipelines — from ETL and star schema design to interactive dashboards and time-series forecasting. Projects span FMCG procurement intelligence, pharmacy retail operations, and e-commerce marketing analytics. Strong foundation in Python, SQL, and business-oriented storytelling; background in UX design sharpens how I communicate findings to non-technical stakeholders.",
   avatarUrl: "",
-  personalWebsiteUrl: "https://github.com/albarpambagio",
+  personalWebsiteUrl: "",
   contact: {
     email: "albarpambagio@gmail.com",
     tel: "",
@@ -132,11 +132,7 @@ export const RESUME_DATA: ResumeData = {
     },
     {
       title: "Olist Marketing Funnel: Channel Performance & LTV Analysis",
-      techStack: [
-        "Python",
-        "PostgreSQL",
-        "Power BI",
-      ],
+      techStack: ["Python", "PostgreSQL", "Power BI"],
       description:
         "Analyzed 8,000 MQLs and 100,000 orders. Built combined star schema joining marketing funnel and e-commerce datasets. Identified root cause of Social channel's low conversion (5.56%): 17.3% Wolf-profile deal mix — nearly double other channels. Delivered 4-page Power BI dashboard for VP Marketing budget allocation.",
       link: {

@@ -1,6 +1,6 @@
 import { Analytics } from "@vercel/analytics/react";
-import { Plus_Jakarta_Sans, Space_Mono } from "next/font/google";
 import type { Metadata, Viewport } from "next";
+import { Plus_Jakarta_Sans, Space_Mono } from "next/font/google";
 
 import "./globals.css";
 import type React from "react";
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: RESUME_DATA.personalWebsiteUrl,
+    url: "https://albar-cv.pages.dev",
     siteName: `${RESUME_DATA.name}'s CV`,
     title: `Albar Pambagio — Data Analyst`,
     description:
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
       "Data analyst building analytics pipelines across FMCG, retail, and healthcare. Based in Bandung, Indonesia.",
   },
   alternates: {
-    canonical: RESUME_DATA.personalWebsiteUrl,
+    canonical: "https://albar-cv.pages.dev",
   },
 };
 
