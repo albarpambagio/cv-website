@@ -10,15 +10,27 @@ interface EducationPeriodProps {
 }
 
 /**
- * Displays the education period in a consistent format
+ * Displays the education period in a consistent format.
+ * Shows a single value when start and end are the same (e.g. "2024"),
+ * or a range (e.g. "2022 - 2026").
  */
 function EducationPeriod({ start, end }: EducationPeriodProps) {
+  if (start === end) {
+    return (
+      <div
+        className="text-sm tabular-nums text-gray-500"
+        title={start}
+      >
+        {start}
+      </div>
+    );
+  }
   return (
     <div
       className="text-sm tabular-nums text-gray-500"
-      title={`Period: ${start} to ${end ?? "Present"}`}
+      title={`${start} - ${end}`}
     >
-      {start} - {end ?? "Present"}
+      {start} - {end}
     </div>
   );
 }

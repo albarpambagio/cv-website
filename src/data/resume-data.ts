@@ -48,8 +48,8 @@ export const RESUME_DATA: ResumeData = {
     {
       school: "Bangkit Academy (Google, Tokopedia, Gojek, Traveloka)",
       degree: "Independent Study — Cloud Computing Cohort",
-      start: "2024",
-      end: null,
+      start: "Feb 2024",
+      end: "Jun 2024",
     },
   ],
   work: [

@@ -54,7 +54,7 @@ CV_DATA = {
                     "area": "Cloud Computing",
                     "degree": "Independent Study",
                     "start_date": "2024",
-                    "end_date": None,
+                    "end_date": "2024",
                 },
             ],
             "experience": [
