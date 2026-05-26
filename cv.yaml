@@ -2,7 +2,7 @@ cv:
   name: Albar Pambagio Arioseto
   email: albarpambagio@gmail.com
   location: Bandung, Indonesia
-  website: https://github.com
+  website: https://albar-cv.pages.dev
   social_networks:
     - network: GitHub
       username: albarpambagio
@@ -36,7 +36,8 @@ cv:
         start_date: '2020'
         end_date: '2021'
         highlights:
-          - Designed user interfaces for school and learning management system products
+          - Designed user interfaces for school and learning management system products, translating user requirements 
+            into component specifications
           - Collaborated with developers to establish a shared design system, reducing implementation inconsistency 
             across product lines
     projects:
@@ -71,10 +72,18 @@ cv:
       - label: Databases & Tools
         details: PostgreSQL, DuckDB, dbt, pandas
       - label: Analytics
-        details: ETL Pipeline Design, Star Schema Modeling, EDA, Time-Series Analysis, Forecasting (AutoARIMA, AutoETS)
+        details: ETL Pipeline Design, Star Schema Modeling, Exploratory Data Analysis, Time-Series Analysis, Forecasting
+          (AutoARIMA, AutoETS)
       - label: Business Analytics
         details: Funnel Analysis, LTV Analysis, Power BI
       - label: Web & Deployment
         details: Next.js, Recharts, Cloudflare Pages, GitHub Actions, Marimo
 design:
   theme: engineeringresumes
+  colors:
+    links: rgb(37,99,235)
+  links:
+    show_external_link_icon: true
+  header:
+    connections:
+      show_icons: true

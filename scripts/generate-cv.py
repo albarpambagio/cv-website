@@ -24,10 +24,11 @@ CV_DATA = {
         "name": "Albar Pambagio Arioseto",
         "email": "albarpambagio@gmail.com",
         "location": "Bandung, Indonesia",
-        "website": "https://github.com",
+        "website": "https://albar-cv.pages.dev",
         "social_networks": [
             {"network": "GitHub", "username": "albarpambagio"},
             {"network": "LinkedIn", "username": "albarpambagio"},
+
         ],
         "sections": {
             "summary": [
@@ -63,7 +64,7 @@ CV_DATA = {
                     "start_date": "2020",
                     "end_date": "2021",
                     "highlights": [
-                        "Designed user interfaces for school and learning management system products",
+                        "Designed user interfaces for school and learning management system products, translating user requirements into component specifications",
                         "Collaborated with developers to establish a shared design system, reducing implementation inconsistency across product lines",
                     ],
                 }
@@ -107,7 +108,7 @@ CV_DATA = {
                 },
                 {
                     "label": "Analytics",
-                    "details": "ETL Pipeline Design, Star Schema Modeling, EDA, Time-Series Analysis, Forecasting (AutoARIMA, AutoETS)",
+                        "details": "ETL Pipeline Design, Star Schema Modeling, Exploratory Data Analysis, Time-Series Analysis, Forecasting (AutoARIMA, AutoETS)",
                 },
                 {
                     "label": "Business Analytics",
@@ -122,6 +123,17 @@ CV_DATA = {
     },
     "design": {
         "theme": "engineeringresumes",
+        "colors": {
+            "links": "rgb(37,99,235)",
+        },
+        "links": {
+            "show_external_link_icon": True,
+        },
+        "header": {
+            "connections": {
+                "show_icons": True,
+            },
+        },
     },
 }
 
