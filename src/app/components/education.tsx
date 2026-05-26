@@ -16,9 +16,9 @@ function EducationPeriod({ start, end }: EducationPeriodProps) {
   return (
     <div
       className="text-sm tabular-nums text-gray-500"
-      title={`Period: ${start} to ${end}`}
+      title={`Period: ${start} to ${end ?? "Present"}`}
     >
-      {start} - {end}
+      {start} - {end ?? "Present"}
     </div>
   );
 }

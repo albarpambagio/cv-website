@@ -35,7 +35,7 @@ export interface ResumeData {
     school: string;
     degree: string;
     start: string;
-    end: string;
+    end: string | null;
   }>;
   work: Array<{
     company: string;
