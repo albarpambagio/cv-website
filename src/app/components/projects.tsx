@@ -30,7 +30,7 @@ function ProjectLink({ title, link }: ProjectLinkProps) {
         href={link}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center gap-1 hover:underline"
+        className="inline-flex items-center gap-1 underline underline-offset-2"
         aria-label={`${title} project (opens in new tab)`}
       >
         {title}

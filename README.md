@@ -1,20 +1,21 @@
 ![cv](https://github.com/BartoszJarocki/cv/assets/1017620/79bdb9fc-0b20-4d2c-aafe-0526ad4a71d2)
 
-<h1>minimalist cv <a href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FBartoszJarocki%2Fcv"><img src="https://vercel.com/button" alt="Deploy with Vercel" height="24" align="right"></a></h1>
+<h1>albarpambagio/cv-website — Data Analyst CV <a href="https://albar-cv.pages.dev"><img src="https://img.shields.io/badge/deploy-live-2563eb?style=flat-square" height="24" align="right" alt="Live site"></a></h1>
 
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3.4-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
+[![Cloudflare Pages](https://img.shields.io/badge/Cloudflare%20Pages-F38020?logo=cloudflare-pages)](https://pages.cloudflare.com/)
 
-simple web app that renders a minimalist CV with print-friendly layout.
+Personal CV/resume website — fork of [BartoszJarocki/cv](https://github.com/BartoszJarocki/cv). Renders a minimalist CV with print-friendly layout. Deployed on Cloudflare Pages via GitHub Actions.
 
 ## getting started
 
 ```bash
-git clone https://github.com/BartoszJarocki/cv.git
-cd cv
-pnpm install
-pnpm dev
+git clone https://github.com/albarpambagio/cv-website.git
+cd cv-website
+npm install
+npm run dev
 # open http://localhost:3000
 # edit src/data/resume-data.ts to customize
 ```
@@ -22,16 +23,22 @@ pnpm dev
 ## scripts
 
 ```bash
-pnpm dev          # start development server
-pnpm build        # build for production
-pnpm start        # start production server
-pnpm lint         # run biome linting checks
-pnpm lint:fix     # run biome linting with auto-fix
-pnpm format       # check code formatting with biome
-pnpm format:fix   # format code with biome
-pnpm check        # run both linting and formatting checks
-pnpm check:fix    # run both linting and formatting with auto-fix
+npm run dev          # start development server
+npm run build        # build for production (static export)
+npm run start        # start production server
+npm run check        # biome lint + format check
+npm run check:fix    # biome lint + format with auto-fix
+npm run generate:cv  # regenerate cv.yaml + public/cv.pdf via RenderCV
 ```
+
+## deploy
+
+```bash
+npm run build
+npx wrangler pages deploy out --branch main
+```
+
+Every push to `main` triggers automatic deployment via `.github/workflows/deploy.yml`.
 
 ## project structure
 
@@ -76,13 +83,9 @@ export const RESUME_DATA = {
 
 styling uses tailwind css — customize colors in `tailwind.config.js` and global styles in `src/app/globals.css`.
 
-## docker
+## PDF
 
-```bash
-docker compose build     # build the container
-docker compose up -d     # run the container
-docker compose down      # stop the container
-```
+Run `npm run generate:cv` to regenerate the PDF from resume data via RenderCV. Output at `public/cv.pdf`.
 
 ## license
 

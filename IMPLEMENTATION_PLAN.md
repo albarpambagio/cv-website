@@ -20,8 +20,8 @@
 | Phase 0 — Prerequisites | ✅ Done |
 | Phase 1 — Fork & Local Setup | ✅ Done |
 | Phase 2 — Fill Content | ✅ Done |
-| Phase 3 — Customization | ⬜ Pending |
-| Phase 4 — Deploy to Cloudflare Pages | ⬜ Pending |
+| Phase 3 — Customization | ✅ Done |
+| Phase 4 — Deploy to Cloudflare Pages | ✅ Done |
 | Phase 5 — Post-Launch Checklist | ⬜ Pending |
 
 ---
@@ -30,17 +30,17 @@
 
 ### 3.1 Accent Color
 - [x] Changed `--accent` to dark slate
-- [ ] **Verify:** accent color renders on live site
+- [x] **Verify:** accent color renders on live site
 
 ### 3.2 Medium Icon
 - [x] Created `MediumIcon` SVG component
 - [x] Added `"medium"` to `IconType`
 - [x] Added to `ICON_MAP` in `header.tsx`
-- [ ] **Verify:** Medium icon renders in contact bar
+- [x] **Verify:** Medium icon renders in contact bar
 
 ### 3.3 Page Title & Meta
 - [x] Updated `layout.tsx` metadata
-- [ ] **Verify:** title shows "Albar Pambagio — Data Analyst"
+- [x] **Verify:** title shows "Albar Pambagio — Data Analyst"
 
 ### 3.4 Profile Photo (optional)
 - [ ] Host square headshot on CDN
@@ -48,38 +48,38 @@
 
 ### 3.5 Validation
 - [x] `npm run build` succeeds
-- [ ] All customizations render at localhost
+- [x] All customizations render at localhost
 
 ---
 
 ## Phase 4 — Deploy to Cloudflare Pages
 
 ### 4.1 Configure Static Export
-- [ ] Add `output: "export"` to `next.config.js`
-- [ ] **Verify:** `npm run build` produces `out/` directory
+- [x] Add `output: "export"` to `next.config.js`
+- [x] **Verify:** `npm run build` produces `out/` directory
 
 ### 4.2 Create `wrangler.toml`
-- [ ] Create `wrangler.toml` at project root
+- [x] Create `wrangler.toml` at project root
 
 ### 4.3 One-Time wrangler Setup
-- [ ] `npx wrangler login`
-- [ ] `npx wrangler whoami`
-- [ ] `npx wrangler pages project create albar-cv --production-branch main`
+- [x] `npx wrangler login`
+- [x] `npx wrangler whoami`
+- [x] `npx wrangler pages project create albar-cv --production-branch main`
 
 ### 4.4 First Manual Deploy
-- [ ] `npm run build`
-- [ ] `npx wrangler pages deploy out --branch main`
-- [ ] **Verify:** site loads at `albar-cv.pages.dev`
+- [x] `npm run build`
+- [x] `npx wrangler pages deploy out --branch main`
+- [x] **Verify:** site loads at `albar-cv.pages.dev`
 
 ### 4.5 CI/CD via GitHub Actions
-- [ ] Create `.github/workflows/deploy.yml`
-- [ ] Generate Cloudflare API token
-- [ ] Find Account ID
-- [ ] Add `CLOUDFLARE_API_TOKEN` repo secret
-- [ ] Add `CLOUDFLARE_ACCOUNT_ID` repo secret
-- [ ] Commit and push
-- [ ] **Verify:** GitHub Action runs successfully
-- [ ] **Verify:** auto-deploy to `albar-cv.pages.dev`
+- [x] Create `.github/workflows/deploy.yml`
+- [x] Generate Cloudflare API token
+- [x] Find Account ID
+- [x] Add `CLOUDFLARE_API_TOKEN` repo secret
+- [x] Add `CLOUDFLARE_ACCOUNT_ID` repo secret
+- [x] Commit and push
+- [x] **Verify:** GitHub Action runs successfully
+- [x] **Verify:** auto-deploy to `albar-cv.pages.dev`
 
 ---
 
